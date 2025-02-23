@@ -1,4 +1,4 @@
-package com.proyecto.uncampus.back_uncampus;
+package com.proyecto.uncampus;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
