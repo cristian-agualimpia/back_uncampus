@@ -40,7 +40,9 @@ public class MapaController {
             @RequestParam Long destinoId) {
         // Invocar lógica de MapaService
         // Retornar la lista de lugares en la ruta
-        return ResponseEntity.ok(/* lista de lugares del camino más corto */);
+        List<String> demo = [""];
+
+        return ResponseEntity.ok(["CyT","Aulass","Etc"]);
     }
     
     // Otros endpoints

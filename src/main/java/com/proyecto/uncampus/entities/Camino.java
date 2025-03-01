@@ -9,6 +9,7 @@ import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Camino {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,8 +22,42 @@ public class Camino {
     @JoinColumn(name = "destino_id")
     private Lugar destino;
 
-    private Double distancia; // Distancia en metros, o la métrica que uses
+    private Double distancia;
 
-    // Getters y setters
+    public Camino() {
+    }
+
+    public Camino(Lugar origen, Lugar destino, Double distancia) {
+        this.origen = origen;
+        this.destino = destino;
+        this.distancia = distancia;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public Lugar getOrigen() {
+        return origen;
+    }
+
+    public Lugar getDestino() {
+        return destino;
+    }
+
+    public Double getDistancia() {
+        return distancia;
+    }
+
+    public void setOrigen(Lugar origen) {
+        this.origen = origen;
+    }
+
+    public void setDestino(Lugar destino) {
+        this.destino = destino;
+    }
+
+    public void setDistancia(Double distancia) {
+        this.distancia = distancia;
+    }
 }
-
